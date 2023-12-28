@@ -7,8 +7,16 @@
 # summary
 
 整套架构"MY"的项目名称以DOTA2中的英雄名称命名。
+目前包含可插拔组件：
+- - - - - - - - - - - - - - - - -
+|zeus    | parent
+|medusa  | 框架核心实现
+|karl    | 配置中心模块扩展
+|warlock | jdbc模块扩展
+|witch   | cache模块（redis）扩展
+|rubick  | log模块扩展
 
-## Medusa
+## medusa
 
 "MY"架构核心代码实现，自动装配入口: MyCoreAutoConfiguration
 
@@ -60,7 +68,7 @@
 
 关于spring cloud的版本使用"2021.0.8"，即spring boot2.x / spring framework 5版本，同时会保持更新进度
 
-## Zeus
+## zeus
 
 parent项目，负责定义框架/插件版本
 
@@ -71,14 +79,14 @@ parent项目，负责定义框架/插件版本
 - 匹配环境
 - 设置基础spring cloud 版本 维持spring boot 2.7 对应的最新版
 
-## Karl
+## karl
 
 架构-服务配置
 
-## Warlock
+## warlock
 
 framework jdbc模块
 
-## Witch
+## witch
 
 framework cache模块
