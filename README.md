@@ -8,7 +8,7 @@
 
 整套架构"MY"的项目名称以DOTA2中的英雄名称命名。
 
-## medusa
+## Medusa
 
 "MY"架构核心代码实现，自动装配入口: MyCoreAutoConfiguration
 
@@ -60,7 +60,7 @@
 
 关于spring cloud的版本使用"2021.0.8"，即spring boot2.x / spring framework 5版本，同时会保持更新进度
 
-## zeus
+## Zeus
 
 parent项目，负责定义框架/插件版本
 
@@ -71,14 +71,14 @@ parent项目，负责定义框架/插件版本
 - 匹配环境
 - 设置基础spring cloud 版本 维持spring boot 2.7 对应的最新版
 
-## karl
+## Karl
 
 架构-服务配置
 
-## warlock
+## Warlock
 
 framework jdbc模块
 
-## witch
+## Witch
 
 framework cache模块
