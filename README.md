@@ -60,4 +60,13 @@
 
 关于spring cloud的版本使用"2021.0.8"，即spring boot2.x / spring framework 5版本，同时会保持更新进度
 
+## zeus
 
+parent项目，负责定义框架/插件版本
+
+### 1.0.0
+
+初始版本：
+
+- 匹配环境
+- 设置基础spring cloud 版本 维持spring boot 2.7 对应的最新版
