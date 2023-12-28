@@ -70,3 +70,11 @@ parent项目，负责定义框架/插件版本
 
 - 匹配环境
 - 设置基础spring cloud 版本 维持spring boot 2.7 对应的最新版
+
+## karl
+
+架构-服务配置
+
+## warlock
+
+framework jdbc模块
