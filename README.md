@@ -1,22 +1,24 @@
 # facade
 
-因为整套微服务架构代码属于隐私模式，这个项目提供对外入口以及功能介绍
+因为涉及一些私人云服务信息，整套微服务架构项目设置了隐私模式，「这个项目提供对外入口以及功能介绍」
 
-如果您希望阅读/修改相应代码，请将您的账号发送到邮箱:syiea_jwy@126.com
+如果您感兴趣的话，请将您的账号发送到邮箱:syiea_jwy@126.com，我将为您设置权限。
 
 # summary
 
 整套架构"MY"的项目名称以DOTA2中的英雄名称命名。
 目前包含可插拔组件：
 
-|project | description
-|--------|------------
-|zeus    | parent
-|medusa  | 框架核心实现
-|karl    | 配置中心模块扩展
-|warlock | jdbc模块扩展
-|witch   | cache模块（redis）扩展
-|rubick  | log模块扩展
+|project      | description
+|-------------|------------
+|zeus         | parent
+|medusa       | 框架核心实现
+|karl         | 配置中心模块扩展
+|warlock      | jdbc模块扩展
+|witch        | cache模块（redis）扩展
+|rubick       | log模块扩展
+|doom         | admin 微服务管理模块
+|broodmother  | 脚手架
 
 ## medusa
 
