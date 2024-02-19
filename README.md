@@ -101,33 +101,38 @@ framework cache模块
 
 暂时定义meepo为一个"轻量级"的服务，而除了源生SnowFlake的实现之外，都需要额外的支持，比如数据库
 
-排除掉baidu的uid-generator，因其基本上与使用SnowFlake实现无区别，且未有维护
-排除掉美团leaf，在高QPS场景可以使用
-排除掉滴滴Tinyid，与美团leaf相似，我认为还是美团leaf好点
+- 排除掉baidu的uid-generator，因其基本上与使用SnowFlake实现无区别，且未有维护
+- 排除掉美团leaf，在高QPS场景可以使用
+- 排除掉滴滴Tinyid，与美团leaf相似，我认为还是美团leaf好点
+
 需要关心两个配置：
 
+```
 - sys.snowflake.workid： 机器的编号，默认为1。！有多个节点部署的话必须要"手动配置"，不能重复
 - sys.snowflake.datacenterId：数据中心的编号，默认为1。多个节点部署的话也要手动配置。
-如何处理时钟回拨问题？
-记录最近一次生成的ID
-每次生成新的都要比较，如果不是递增顺序的话，则返回最近的id+1
-每次生成的ID步长为"10"
-不适用于"平均" qps > 1000的场景
-升级路线
-自研实现分段式数据库id分发
-采用美团leaf
+```
+
+### 如何处理时钟回拨问题？
+
+- 记录最近一次生成的ID
+- 每次生成新的都要比较，如果不是递增顺序的话，则返回最近的id+1
+  - 每次生成的ID步长为"10"
+  - 不适用于"平均" qps > 1000的场景
+
+### 升级路线
+
+- 自研实现分段式数据库id分发
+- 采用美团leaf
 
 ## arcwarden
 
 ID Generator Client
 
-meepo是ID Generator server，需要搭配使用
+meepo是ID Generator server，需要搭配使用.只要引用就默认支持这个模块，没有开关
 
-只要引用就默认支持这个模块，没有开关
-
-1.0.0
 使用方式如下：
 
+```
 ...
 @Autowired
 private IdGeneratorClient idGeneratorClient;
@@ -135,5 +140,5 @@ private IdGeneratorClient idGeneratorClient;
 ...
 long id = idGeneratorClient.nextId();
 ...
-
+```
 查看IdGeneratorClient的注释以更好的应用
