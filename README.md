@@ -49,6 +49,7 @@
 - 流量灰度/路由功能实现
   - 默认开启状态，你可以设置my.extension.feature=false来关闭。
   - ！灰度路由功能同时依赖负载均衡扩展，确保my.extension.load-balance=true(默认)来开启
+- ApiDoc生成，默认开启状态，设置springdoc.api-docs.enabled=false关闭(请在prod环境下关闭)
 - 系统上下文工具扩展：MyContextUtils。注入此工具类可以获取"MY"架构内的上下文内容，包括：
   - 统一JSON工具
   - Feature、SaaS Tenant、UserInfo 等上下文内容
@@ -64,7 +65,7 @@
 - 使用load balance实现负载均衡
 - 使用sleuth提供链路追踪
 - 使用actuator提供服务状态信息
-- 使用swagger提供API可视化
+- 使用SpringDoc提供API可视化
 - 使用prometheus提供监控
 - 使用commons 、guava提供统一通用工具实现
 
