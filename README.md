@@ -50,11 +50,27 @@
   - 默认开启状态，你可以设置my.extension.feature=false来关闭。
   - ！灰度路由功能同时依赖负载均衡扩展，确保my.extension.load-balance=true(默认)来开启
 - ApiDoc生成，默认开启状态，设置springdoc.api-docs.enabled=false关闭(请在prod环境下关闭)
+- Authentication JWT访问权限验证, 默认开启状态，设置my.authorization.jwt.enabled=false关闭
 - 系统上下文工具扩展：MyContextUtils。注入此工具类可以获取"MY"架构内的上下文内容，包括：
   - 统一JSON工具
   - Feature、SaaS Tenant、UserInfo 等上下文内容
   - Spring上下文工具
   
+### 系统配置
+
+| item                               | description
+|------------------------------------|------------
+| sys.restTemplate.connection.timeout|restTemplate创建连接超时时间：默认5s，单位是millisecond
+| sys.restTemplate.read.timeout|restTemplate请求超时时间：默认10s，单位是millisecond
+ 
+#### 关于Authentication验证模块
+
+    "My"框架默认支持并开启JWT Authentication验证，即在请求的时候需要添加Authentication header并设置正确的token才准许访问
+
+    你可以通过设置 my.authorization.jwt.enabled=false来关闭此功能
+    你可以通过设置 my.jwt.token=xxx 来指定token
+    你剋有通过设置 my.authorization.path.ignores=/xx,/xx来忽略指定的请求头
+
 #### 技术选型
 
 "MY"微服务架构使用如下技术实现重点功能：
