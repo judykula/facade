@@ -119,6 +119,15 @@ parent项目，负责定义框架/插件版本
 
 framework jdbc模块
 
+引入合适的ORM(jpa)  以及相关插件
+
+定义ID Generator Entity:
+```
+- AbstractEntity: 定义公共基础字段：比如创建时间
+- AbstractAutoIncIdEntity: 设定ID自增策略
+- AbstractSpecifyIdEntity: 设定ID有程序设定
+```
+ 
 ## witch
 
 framework cache模块
