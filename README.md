@@ -172,9 +172,9 @@ long id = idGeneratorClient.nextId();
 - 无状态，不要涉及具体业务上下文调用、线程创建等
 - utils不要重复造轮子，优先使用apache、guava通用工具类
   
-    项目结构：
-        - constant: 常量定义放到这里
-        - enm: enum定义放到这里
-        - exception: exception定义放到这里
-        - pojo: 对应的各种"dto"定义放到这里
-        - util: 工具类放到这里
+项目结构：
+  -- constant: 常量定义放到这里
+  -- enm: enum定义放到这里
+  -- exception: exception定义放到这里
+  -- pojo: 对应的各种"dto"定义放到这里
+  -- util: 工具类放到这里
