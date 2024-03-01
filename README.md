@@ -130,7 +130,16 @@ framework jdbc模块
  
 ## witch
 
-framework cache模块
+framework cache模块-> redis
+
+```
+- 提供自定义template：
+    - 读写分离模式 RedisTemplate
+    - 仅主节点模式 MyMainStringRedisTemplate
+- 自定义使用jackson序列化
+- 提供分布式锁RedisLock，支持ttl与wait
+
+```
 
 ## meepo
 
