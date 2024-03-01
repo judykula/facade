@@ -13,6 +13,7 @@
 |-------------|------------
 |zeus         | parent
 |medusa       | 框架核心实现
+|wisp         | 公共项目
 |karl         | 配置中心模块扩展
 |warlock      | jdbc模块扩展
 |witch        | cache模块（redis）扩展
@@ -159,3 +160,21 @@ long id = idGeneratorClient.nextId();
 ...
 ```
 查看IdGeneratorClient的注释以更好的应用
+
+## wisp
+
+公共依赖项目，主要包含各个项目的公共"无状态"内容，比如rpc之间的requestDto与responseDto
+
+请遵循以下规则在此项目中添加内容：
+
+- 保持"公共"属性，至少有>=2项目使用的内容
+- 设计尽量"抽象"，以提高复用概率
+- 无状态，不要涉及具体业务上下文调用、线程创建等
+- utils不要重复造轮子，优先使用apache、guava通用工具类
+  
+项目结构：
+  - constant: 常量定义放到这里
+  - enm: enum定义放到这里
+  - exception: exception定义放到这里
+  - pojo: 对应的各种"dto"定义放到这里
+  - util: 工具类放到这里
