@@ -117,7 +117,9 @@ parent项目，负责定义框架/插件版本
 
 framework jdbc模块
 
-引入合适的ORM(jpa)  以及相关插件
+1. 引入合适的ORM(jpa)  以及相关插件
+2. 确定表-实体之间的自动映射策略
+3. ...
 
 定义ID Generator Entity:
 ```
