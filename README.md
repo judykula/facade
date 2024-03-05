@@ -86,9 +86,7 @@
 - 使用prometheus提供监控
 - 使用commons 、guava提供统一通用工具实现
 
-关于Circuit Breaker相关内容目前在"网管"层主要处理
-
-关于spring cloud的版本使用"2021.0.8"，即spring boot2.x / spring framework 5版本，同时会保持更新进度
+关于Circuit Breaker相关内容目前在"网关"层主要处理
 
 ## zeus
 
