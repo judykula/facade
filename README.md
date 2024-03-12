@@ -18,7 +18,7 @@
 |warlock      | jdbc模块扩展
 |witch        | cache模块（redis）扩展
 |rubick       | log模块扩展
-|doom         | admin 微服务管理模块
+|doom         | 微服务可视化
 |broodmother  | 脚手架
 |meepo        | 统一分布式ID发号器server
 |arcwarden    | 统一分布式ID发号器client
